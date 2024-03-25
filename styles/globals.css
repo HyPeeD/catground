@@ -1,0 +1,108 @@
+:root {
+    --background: #F2F2F2;
+    --on-surface: #FFFFFF;
+    --on-surface-alt: #F8FAFC;
+    --foreground: #0F172A;
+    --foreground-muted: #64748B;
+    --placeholder: #94A3B8;
+    --placeholder-alt: #CBD5FF;
+    --border: rgba(15, 23, 41, .102);
+    --primary: #0EA5E9;
+    --button: #0F172A;
+    --button-alt: #334454;
+
+    --radius: .5rem;
+
+    --fs-300: .85rem;
+    --fs-500: 1.25rem;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi: 600;
+    --fw-bold: 700;
+}
+
+body.dark {
+    /* Box shadow for dark input (inset 0 1px 0 0 #ffffff0d;) */
+    --background: #0b1120;
+    --on-surface: #1e293b;
+    --on-surface-alt: #1e293b;
+    --foreground: #FFFFFF;
+    --foreground-muted: #94a3b8;
+    --placeholder: #cbd5e1;
+    --placeholder-alt: #94a3b8;
+    --button: var(--primary);
+    --button-alt: #38bdf8;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Utility classes */
+.container {
+    --width: 1024px;
+    --padding: 1rem;
+
+    width: min(
+        calc(100% - var(--padding) * 2),
+        var(--width)
+    );
+    margin-right: auto;
+    margin-left: auto;
+}
