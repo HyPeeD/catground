@@ -1,0 +1,32 @@
+.footer {
+    padding: 1rem 0 3rem 0;
+}
+
+.footer-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-social-link {
+    color: var(--foreground);
+}
+
+.footer-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--foreground);
+}
+
+.footer-theme-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.footer-copy {
+    color: var(--foreground-muted);
+    text-align: center;
+}

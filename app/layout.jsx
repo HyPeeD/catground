@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export const metadata = {
     title: "CatGround",
@@ -9,10 +10,13 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
     return (
-        <html lang="en">
-            <body className="dark">
+        <html lang="en" suppressHydrationWarning>
+            <body>
                 <Header />
-                {children}
+                <main>
+                    {children}
+                </main>
+                <Footer />
             </body>
         </html>
     );

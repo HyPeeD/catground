@@ -14,12 +14,20 @@
     --radius: .5rem;
 
     --fs-300: .85rem;
-    --fs-500: 1.25rem;
+    --fs-500: 1.15rem;
+    --fs-600: 1.25rem;
 
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semi: 600;
     --fw-bold: 700;
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --fs-300: .725rem;
+        --fs-500: 1.05rem;
+    }
 }
 
 body.dark {
@@ -31,8 +39,13 @@ body.dark {
     --foreground-muted: #94a3b8;
     --placeholder: #cbd5e1;
     --placeholder-alt: #94a3b8;
+    --border: rgba(226, 232, 240, 0.051);
     --button: var(--primary);
     --button-alt: #38bdf8;
+}
+
+body.scroll-lock {
+    overflow: hidden;
 }
 
 /* Box sizing rules */
@@ -42,6 +55,20 @@ body.dark {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: var(--radius);
 }
 
 ul {
@@ -105,4 +132,20 @@ a {
     );
     margin-right: auto;
     margin-left: auto;
+}
+
+section {
+    padding: 3rem 0 4rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-hidden {
+        display: none;
+    }
 }
