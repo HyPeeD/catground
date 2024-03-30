@@ -1,0 +1,197 @@
+/* Margin */
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+.mi-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Padding */
+.py-1 {
+    padding: .25rem;
+}
+
+.p-2 {
+    padding: .75rem;
+}
+
+.px-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Font size */
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+/* Font weight */
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+/* Typography */
+.text-center {
+    text-align: center;
+}
+
+.truncate {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Colors */
+.foreground {
+    color: var(--foreground);
+}
+
+.foreground-muted {
+    color: var(--foreground-muted);
+}
+
+.color-inherit {
+    color: inherit;
+}
+
+/* Backgrounds */
+.on-surface {
+    --bg: 203, 213, 255;
+    --opacity: .2;
+
+    background: rgba(var(--bg), var(--opacity));
+}
+
+body.dark .on-surface  {
+    --bg: 51, 65, 85;
+    --opacity: .3;
+}
+
+.on-surface-alt {
+    --bg: 203, 213, 255;
+    --opacity: .35;
+
+    background: rgba(var(--bg), var(--opacity));
+}
+
+body.dark .on-surface-alt  {
+    --opacity: .05;
+}
+
+/* Radius */
+.rounded {
+    border-radius: var(--radius);
+}
+
+.rounded-full {
+    border-radius: 20rem;
+}
+
+/* Flex box */
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.gap-1 {
+    gap: .5rem;
+}
+
+.gap-2 {
+    gap: 1rem;
+}
+
+.gap-3 {
+    gap: 1.5rem;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Height */
+.h-full {
+    height: 100%;
+}
+
+.h-4 {
+    height: 1rem;
+}
+
+.h-10 {
+    height: 2.5rem;
+}
+
+.h-20 {
+    height: 5rem;
+}
+
+/* Width */
+.w-full {
+    width: 100%;
+}
+
+.w-4 {
+    width: 1rem;
+}
+
+.w-10 {
+    width: 2.5rem;
+}
+
+.w-20 {
+    width: 5rem;
+}
+
+.w-max {
+    width: max-content;
+}
+
+/* Object */
+.object-cover {
+    object-fit: cover;
+}
+
+/* Overflow */
+.overflow-hidden {
+    overflow: hidden;
+}

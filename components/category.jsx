@@ -1,32 +1,38 @@
 import "@/styles/category.css";
 
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-export const Category = ({ title, id, images }) => {
+export const Category = ({ title, id, wallpapers }) => {
     return (
         <div className="category-container">
-            <div className="category-header">
-                <h3 className="category-title">{title}</h3>
-                <p className="category-link">
-                    See more
-                    <ArrowRight className="category-link-arrow" />
-                </p>
-            </div>
+            <Link href={`/categories/${id}`} className="wrapper-link">
+                <div className="category-header">
+                    <h3 className="category-title">{title}</h3>
+                    <p className="category-link">
+                        See more
+                        <ArrowRight className="category-link-arrow" />
+                    </p>
+                </div>
+            </Link>
 
 
             <div className="category-scroll-container">
                 <div className="category-grid">
-                    {images.map((image, index) => (
+                    {wallpapers.map((wallpaper, index) => (
                         <div
+                            key={index}
+                            title={wallpaper.title}
                             className="category-image-container"
                             data-order={`category-grid-col-${index + 1}`}
-                            key={index}
                         >
-                            <img
-                                src={image}
-                                alt="wallpaper"
-                                className="category-image"
-                            />
+                            <Link href={`/wallpaper/${wallpaper.id}`} className="wrapper-link">
+                                <img
+                                    src={wallpaper.imageUrl}
+                                    alt="wallpaper"
+                                    className="category-image"
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>

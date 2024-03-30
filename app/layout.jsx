@@ -1,7 +1,10 @@
 import "@/styles/globals.css";
 
+import { ThemeProvider } from "@/providers/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { FavProvider } from "@/providers/fav-provider";
+import { SearchProvider } from "@/providers/search-provider";
 
 export const metadata = {
     title: "CatGround",
@@ -12,11 +15,17 @@ const RootLayout = ({ children }) => {
     return (
         <html lang="en" suppressHydrationWarning>
             <body>
-                <Header />
-                <main>
-                    {children}
-                </main>
-                <Footer />
+                <ThemeProvider>
+                    <FavProvider>
+                        <SearchProvider>
+                            <Header />
+                            <main>
+                                {children}
+                            </main>
+                        </SearchProvider>
+                    </FavProvider>
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     );

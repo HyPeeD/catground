@@ -14,8 +14,10 @@
     --radius: .5rem;
 
     --fs-300: .85rem;
+    --fs-400: .95rem;
     --fs-500: 1.15rem;
     --fs-600: 1.25rem;
+    --fs-900: 2.5rem;
 
     --fw-regular: 400;
     --fw-medium: 500;
@@ -27,6 +29,7 @@
     :root {
         --fs-300: .725rem;
         --fs-500: 1.05rem;
+        --fs-900: 2rem;
     }
 }
 
@@ -58,8 +61,8 @@ body.scroll-lock {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -132,6 +135,10 @@ a {
     );
     margin-right: auto;
     margin-left: auto;
+}
+
+.wrapper-link {
+    color: inherit;
 }
 
 section {
