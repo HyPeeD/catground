@@ -6,6 +6,7 @@ import { File, FileKey2 } from "lucide-react";
 import { categories } from "@/constants/data";
 import { SaveFavoriteBtn } from "@/components/save-favorite-button";
 import { Keyword } from "@/components/keyword";
+import { DownloadButton } from "@/components/download-button";
 
 const Wallpaper = async ({ params }) => {
     const allWallpapers = categories.reduce((acc, category) => [...acc, ...category.wallpapers], []);
@@ -53,9 +54,7 @@ const Wallpaper = async ({ params }) => {
                                 </ul>
 
                                 <div className="wallpaper-actions-container">
-                                    <button className="download-btn">
-                                        Download 4K
-                                    </button>
+                                    <DownloadButton imageUrl={wallpaper.imageUrl} />
 
                                     <SaveFavoriteBtn id={wallpaper.id} />
                                 </div>
