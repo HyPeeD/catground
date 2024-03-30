@@ -5,7 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FavProvider } from "@/providers/fav-provider";
 import { SearchProvider } from "@/providers/search-provider";
-import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
     title: "CatGround",
@@ -15,14 +15,12 @@ export const metadata = {
 const RootLayout = ({ children }) => {
     return (
         <html lang="en" suppressHydrationWarning>
+            <Script
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9265825629424544"
+                strategy="afterInteractive"
+                crossorigin="anonymous"
+            />
             <body>
-                <Head>
-                    <script
-                        async
-                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9265825629424544"
-                        crossorigin="anonymous"
-                    />
-                </Head>
                 <ThemeProvider>
                     <FavProvider>
                         <SearchProvider>
