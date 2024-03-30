@@ -1,7 +1,7 @@
 "use client";
 
 export const DownloadButton = ({ imageUrl }) => {
-    const imageURL = `${process.env.NEXT_PUBLIC_URL}${imageUrl}`;
+    const imageURL = `https://catground.vercel.app${imageUrl}`;
 
     const handleDownload = async () => {
         const response = await fetch(imageURL);

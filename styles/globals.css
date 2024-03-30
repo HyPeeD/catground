@@ -149,12 +149,12 @@ section {
 
 @media screen and (min-width: 768px) {
     .desktop-hidden {
-        display: none;
+        display: none !important;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .mobile-hidden {
-        display: none;
+        display: none !important;
     }
 }

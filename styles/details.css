@@ -1,6 +1,8 @@
 .details-not-found {
-    line-height: 15rem;
-    text-align: center;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--foreground-muted);
     font-size: var(--fs-400);
 }
