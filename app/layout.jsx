@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FavProvider } from "@/providers/fav-provider";
 import { SearchProvider } from "@/providers/search-provider";
+import Head from "next/head";
 
 export const metadata = {
     title: "CatGround",
@@ -15,6 +16,13 @@ const RootLayout = ({ children }) => {
     return (
         <html lang="en" suppressHydrationWarning>
             <body>
+                <Head>
+                    <script
+                        async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9265825629424544"
+                        crossorigin="anonymous"
+                    />
+                </Head>
                 <ThemeProvider>
                     <FavProvider>
                         <SearchProvider>
