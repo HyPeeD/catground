@@ -2,6 +2,7 @@
 
 import "@/styles/search-modal.css";
 
+import Link from "next/link";
 import { ChevronRight, Search, X } from "lucide-react";
 
 import { categories } from "@/constants/data";
@@ -49,27 +50,34 @@ export const SearchModal = ({ closeModal }) => {
                     ) : (
                         <div className="search-modal-result">
                             {searched.map((wallpaper, index) => (
-                                <div className="search-result-box" key={index}>
-                                    <div className="search-modal-image-container">
-                                        <img
-                                            src={wallpaper.imageUrl}
-                                            alt="cats"
-                                            className="search-modal-image"
-                                        />
+                                <Link
+                                    key={index}
+                                    href={`/wallpaper/${wallpaper.id}`}
+                                    onClick={closeModal}
+                                    className="color-inherit"
+                                >
+                                    <div className="search-result-box">
+                                        <div className="search-modal-image-container">
+                                            <img
+                                                src={wallpaper.imageUrl}
+                                                alt="cats"
+                                                className="search-modal-image"
+                                            />
+                                        </div>
+
+                                        <div className="search-result-box-content">
+                                            <h3 className="search-result-box-title">
+                                                {wallpaper.title}
+                                            </h3>
+
+                                            <p className="search-result-box-keywords">
+                                                {wallpaper.keywords.join(", ")}
+                                            </p>
+                                        </div>
+
+                                        <ChevronRight className="search-result-box-icon" />
                                     </div>
-
-                                    <div className="search-result-box-content">
-                                        <h3 className="search-result-box-title">
-                                            {wallpaper.title}
-                                        </h3>
-
-                                        <p className="search-result-box-keywords">
-                                            {wallpaper.keywords.join(", ")}
-                                        </p>
-                                    </div>
-
-                                    <ChevronRight className="search-result-box-icon" />
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )}
